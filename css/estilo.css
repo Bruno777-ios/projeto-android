@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    /* Define a fonte personalizada "Android" */
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/*
+Color Palette:
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+/* 
+../ serve para subir um nível na hierarquia de pastas,
+por exemplo, se o arquivo CSS estiver em css/estilo.css,
+o caminho para a fonte seria ../fontes/android.otf
+*/
+
+:root {
+    /*    Define cores e fontes para o site */
+    --color-0: #c5ebd6;
+    --color-1: #83e1ad;
+    --color-2: #3ddc84;
+    --color-3: #2fa866;
+    --color-4: #1a5c37;
+    --color-5: #063d1e;
+
+    --font-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', sans-serif;
+}
+
+*{
+    /* Reseta o padding e margin de todos os elementos */
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    /* Define o background e a fonte padrão do site */
+    
+    background-color: #c5ebd6;
+    font-family: var(--font-padrao);
+
+}
+
+a.externo::after { /* ":: after" é usado para adicionar conteúdo após o link */
+    /* Adiciona um ícone de link externo aos links externos */
+    content: ' 🔗';
+}
+
+main p {
+    /* Define o parágrafo padrão do site */
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+main strong {
+    /* Define o texto em negrito do conteúdo */
+    font-weight: bold;
+    color: var(--color-5);
+}
+
+main a {
+    /* Define os links do conteúdo */
+    color: var(--color-1);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color-4);
+    padding: 5px;
+}
+
+main a:hover {
+    /* Define o efeito hover dos links do conteúdo */
+    background-color: var(--color-2);
+    color: white;
+    border-radius: 5px;
+}
+
+header{
+    /* Define o cabeçalho do site */
+background-image: linear-gradient(to bottom, var(--color-4), var(--color-5));
+    min-height: 150px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--fonte-destaque);
+}
+
+header h1 {
+    /* Define o título do cabeçalho */
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+nav {
+    /* Define o menu de navegação do site */
+    background-color: var(--color-2);
+    padding: 10px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+
+}
+
+nav > a {
+    /* Define os links do menu de navegação */
+    color: white;
+    text-decoration: none;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 15px;
+    transition-duration: .3s;
+}
+
+nav > a:hover {
+    /* Define o efeito hover dos links do menu de navegação */
+    background-color: var(--color-3);
+    color: var(--color-5);
+    border-radius: 5px;
+}
+
+main {
+    /* Define o conteúdo principal do site */
+    min-width: 300px;
+    max-width: 1200px;
+    background-color: white;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header > p {
+    /* Define o parágrafo do cabeçalho */
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-left: 10px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+
+   
+}
+
+main h1 {
+    /* Define o título principal do conteúdo */
+    color: var(--color-5);
+    font-family: var(--fonte-android);
+}
+
+main h2 {
+    /* Define os subtítulos do conteúdo */
+    color: var(--color-4);
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+}
+
+main img {
+    /* Define a imagem do conteúdo */
+    width: 100%;
+    height: auto;
+}
+
+main img.pequena {
+    /* Define a imagem pequena do conteúdo */
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+            div.video {
+                /* Define o vídeo do conteúdo */
+                background-color: var(--color-5);
+                text-align: center;
+                margin: 0px -20px 30px -20px;  
+                padding: 20px;   
+                padding-bottom: 59%; 
+                position: relative;
+                border-radius: 10px; /* Define o raio da borda do vídeo */
+}
+
+div.video > iframe {
+    /* Define o iframe do vídeo */
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 92%;
+    height: 92%;
+}
+
+aside {
+    /* Define a barra lateral do conteúdo */
+    background-color: var(--color-1);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Define o raio da borda da barra lateral */
+}
+
+aside > h3 {
+    /* Define o título da barra lateral */
+    background-color: var(--color-4);
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 0px -20px;
+    border-radius: 10px 10px 0px 0px;
+    
+
+}   
+
+aside ul {
+    /* Define a lista da barra lateral */
+    list-style-type: '\1F5F8\00a0\00a0'; /*não é compatível com todos os navegadores*/
+    columns: 2;
+}
+
+footer {
+    /* Define o rodapé do site */
+    background-color: var(--color-5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    /* Define os links do rodapé */
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+footer a:hover {
+    /* Define o efeito hover dos links do rodapé */
+    color: var(--color-1);
+    text-decoration: underline;
+}
